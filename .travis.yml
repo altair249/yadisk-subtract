@@ -1,1 +1,10 @@
+language: generic
+sudo: required
+dist: trusty
 
+os: osx
+
+script:
+- mkdir build
+- cmake -H. -B_build
+- cmake --build _build
