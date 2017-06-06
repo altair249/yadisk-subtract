@@ -1,7 +1,7 @@
 #ifndef PREDICATE_HPP
 #define PREDICATE_HPP
 
-#include "yadisk/ops/Resource.hpp"
+#include "Resource.hpp"
 using yadisk::ops::Resource;
 
 namespace yadisk
