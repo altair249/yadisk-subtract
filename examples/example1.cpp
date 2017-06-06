@@ -3,12 +3,12 @@
 using namespace std;
 
 #include <curl/curl.h>
-#include <url/params.hpp>
-#include <url/path.hpp>
+#include <include/url/params.hpp>
+#include <include/url/path.hpp>
 #include <nlohmann/json.hpp>
 
-#include "yadisk/ops/Tree.hpp"
-#include "yadisk/ops/subtract.hpp"
+#include "include/yadisk/ops/Tree.hpp"
+#include "include/yadisk/ops/subtract.hpp"
 
 template <class Stream>
 auto read(char * ptr, size_t size, size_t count, void * userdata) -> size_t {
