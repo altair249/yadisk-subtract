@@ -1,7 +1,7 @@
 #ifndef TREE_RESOURCE_HPP
 #define TREE_RESOURCE_HPP
 
-#include "yadisk/ops/Resource.hpp"
+#include "Resource.hpp"
 using yadisk::ops::Resource;
 
 namespace yadisk
