@@ -27,9 +27,7 @@ find_package(CURL CONFIG REQUIRED)
 hunter_add_package(nlohmann-json)
 find_package(nlohmann-json REQUIRED)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/url)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/yadisk/ops)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/sources)
 
