@@ -6,6 +6,7 @@ HunterGate(
 	SHA1 "94e3314bfe952db1510ca644d2a8e0b55e9ebc8b"
 )
 
+
 project(yadisk-subtract)
 
 set(SUBTRACT_MAJOR 0)
