@@ -1,8 +1,8 @@
-language: generic
+language: сpp
 sudo: required
 dist: trusty
 
-os: osx
+os: linux
 
 script:
 - cmake -H. -B_builds
