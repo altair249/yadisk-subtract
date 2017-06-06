@@ -1,4 +1,4 @@
-#include "./include/yadisk/ops/Resource.hpp"
+#include "yadisk/ops/Resource.hpp"
 
 using nlohmann::json;
 
