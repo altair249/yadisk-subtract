@@ -36,7 +36,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/sources)
 
 file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/sources/*)
 
-add_executable(${PROJECT_NAME} ${SOURCES})
+add_library(${PROJECT_NAME} ${SOURCES}) # static or shared depends on value BUILD_SHARED_LIBS variable
 
 target_link_libraries(${PROJECT_NAME}
 	Boost::filesystem Boost::system
