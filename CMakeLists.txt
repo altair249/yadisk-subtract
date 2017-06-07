@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include("./gate/cmake/HunterGate.cmake")
 HunterGate(
@@ -7,14 +9,14 @@ HunterGate(
 )
 
 
-project(yadisk-subtract)
+project(yadisk-subtract) # this command set PROJECT_NAME to "yadisk-subtract"
 
 set(SUBTRACT_VERSION_MAJOR 0)
 set(SUBTRACT_VERSION_MINOR 1)
 set(SUBTRACT_VERSION_PATCH 0)
 set(SUBTRACT_VERSION ${SUBTRACT_VERSION_MAJOR}.${SUBTRACT_VERSION_MINOR}.${SUBTRACT_VERSION_PATCH})
 set(SUBTRACT_VERSION_STRING "v${SUBTRACT_VERSION}")
-SET(PROJECT_NAME "yadisk-subtract")
+#SET(PROJECT_NAME "yadisk-subtract")
 
 hunter_add_package(Boost COMPONENTS system filesystem)
 find_package(Boost CONFIG REQUIRED system filesystem)
