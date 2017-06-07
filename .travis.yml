@@ -7,3 +7,11 @@ os: linux
 script:
 - cmake -H. -B_builds
 - cmake --build _builds/
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
