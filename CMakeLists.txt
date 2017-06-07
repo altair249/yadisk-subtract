@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.0)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include("./gate/cmake/HunterGate.cmake")
+include(cmake/HunterGate.cmake)
 HunterGate(
-	URL  "https://github.com/designerror/hunter/archive/v0.18.4.20.tar.gz"
-	SHA1 "94e3314bfe952db1510ca644d2a8e0b55e9ebc8b"
+    URL  "https://github.com/yadisk-ops/hunter/archive/v0.18.47.2.tar.gz"
+    SHA1 "fe0f3a4d337ae08dbea640fd1ebc1e448919fcd3"
+    LOCAL
 )
-
 
 project(yadisk-subtract) # this command set PROJECT_NAME to "yadisk-subtract"
 
