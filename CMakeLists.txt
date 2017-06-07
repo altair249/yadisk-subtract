@@ -57,3 +57,5 @@ add_executable(check ${TESTS_${PROJECT_NAME}_SOURCES} ${CMAKE_CURRENT_SOURCE_DIR
 target_link_libraries(check ${PROJECT_NAME} Catch::Catch)
 add_test(NAME check COMMAND check "-s" "-r" "compact" "--use-colour" "yes")
 endif()
+
+include(CPackConfig.cmake)
