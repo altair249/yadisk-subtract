@@ -11,6 +11,6 @@ TEST_CASE("subtract empty tree1 and full tree2", "[ops][subtract][tree]") {
   //When
   auto res = ydsubtract::Operations::subtract(tree1, tree2)
   //Then
-  REQUIRE(not res.empty())
+  REQUIRE(res == tree1)
   
   }
