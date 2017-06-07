@@ -1,5 +1,6 @@
 #include <catch.hpp>
 #include <yadisk/ops/subtract.hpp>
+#include <yadisk/ops/Tree.hpp>
 using ydsubtract = yadisk::ops::subtract;
 
 
