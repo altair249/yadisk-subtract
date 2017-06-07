@@ -18,6 +18,8 @@ set(SUBTRACT_VERSION ${SUBTRACT_VERSION_MAJOR}.${SUBTRACT_VERSION_MINOR}.${SUBTR
 set(SUBTRACT_VERSION_STRING "v${SUBTRACT_VERSION}")
 #SET(PROJECT_NAME "yadisk-subtract")
 
+option(BUILD_TESTS "Build tests" ON)
+
 hunter_add_package(Boost COMPONENTS system filesystem)
 find_package(Boost CONFIG REQUIRED system filesystem)
 
@@ -44,3 +46,14 @@ target_link_libraries(${PROJECT_NAME}
 	CURL::libcurl
 	nlohmann-json::nlohmann-json
 )
+
+
+if(BUILD_TESTS)
+enable_testing()
+hunter_add_package(Catch)
+find_package(Catch CONFIG REQUIRED)
+file(GLOB TESTS_${PROJECT_NAME}_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/tests/*/*.cpp)
+add_executable(check ${TESTS_${PROJECT_NAME}_SOURCES} ${CMAKE_CURRENT_SOURCE_DIR}/tests/main.cpp)
+target_link_libraries(check ${PROJECT_NAME} Catch::Catch)
+add_test(NAME check COMMAND check "-s" "-r" "compact" "--use-colour" "yes")
+endif()
