@@ -3,12 +3,12 @@
 using namespace std;
 
 #include <curl/curl.h>
-#include <include/url/params.hpp>
-#include <include/url/path.hpp>
+#include <url/params.hpp>
+#include <url/path.hpp>
 #include <nlohmann/json.hpp>
 
-#include "include/yadisk/ops/Tree.hpp"
-#include "include/yadisk/ops/subtract.hpp"
+#include "yadisk/ops/Tree.hpp"
+#include "yadisk/ops/subtract.hpp"
 
 template <class Stream>
 auto read(char * ptr, size_t size, size_t count, void * userdata) -> size_t {
@@ -60,7 +60,7 @@ json get_json(string token, string path)
 
 void recursive_add(Tree& input, string path, yadisk::ops::Node* parent = NULL)
 {
-	json data = get_json("AQAAAAAXlDhiAARYfyTaNPh53U0uevKqq7pyw", path);
+	json data = get_json("AQAAAAAeZ536AARXNNlTWI7XsEZ9jPRmDEUmLJA", path);
 	Resource rsc(data);
 
 	yadisk::ops::Node* node = input.add_child(rsc, parent);
@@ -81,7 +81,7 @@ int main()
 	Tree tree2;
 
 	recursive_add(tree1, "/");
-	recursive_add(tree2, "/Музыка");
+	recursive_add(tree2, "/Музыка_04.06.2017");
 
 	Tree sub(Operations::subtract(tree1, tree2));
 
