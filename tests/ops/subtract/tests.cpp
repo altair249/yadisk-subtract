@@ -15,7 +15,7 @@ TEST_CASE("subtract empty tree1 and full tree2", "[ops][subtract][tree]") {
   flat2 != 0;
   auto res = Operations::subtract(tree1, tree2);
   //Then
-  REQUIRE(res == tree1);
+  REQUIRE(res = tree1);
   
   }
 
@@ -31,7 +31,7 @@ TEST_CASE("subtract full tree1 and empty tree2", "[ops][subtract][tree]") {
   flat2 == 0;
   auto res = Operations::subtract(tree1, tree2);
   //Then
-  REQUIRE(res == tree1);
+  REQUIRE(res = tree1);
   
   }
 
@@ -47,7 +47,7 @@ TEST_CASE("subtract empty tree1 and empty tree2", "[ops][subtract][tree]") {
   flat2 == 0;
   auto res = Operations::subtract(tree1, tree2);
   //Then
-  REQUIRE(res == tree1);
+  REQUIRE(res = tree1);
   
   }
 
