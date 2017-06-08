@@ -8,6 +8,8 @@ script:
 - cmake -H. -B_builds
 - cmake --build _builds/
 - cmake --build _builds/ --target test
+- cmake --build _builds/ --target package
+- doxygen docs/doxygen.conf
 
 addons:
   apt:
