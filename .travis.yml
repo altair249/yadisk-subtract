@@ -18,6 +18,5 @@ addons:
     packages:
       - cmake
       - cmake-data
-      - cpack
       - doxygen
       - doxygen-doc
