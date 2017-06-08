@@ -33,8 +33,6 @@ find_package(CURL CONFIG REQUIRED)
 hunter_add_package(nlohmann-json)
 find_package(nlohmann-json REQUIRED)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/sources)
 
 file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/sources/*)
@@ -47,6 +45,8 @@ target_link_libraries(${PROJECT_NAME}
 	CURL::libcurl
 	nlohmann-json::nlohmann-json
 )
+
+target_include_directories(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 
 if(BUILD_TESTS)
