@@ -13,7 +13,7 @@ TEST_CASE("subtract empty tree1 and full tree2", "[ops][subtract][tree]") {
     //When
   flat1 == 0;
   flat2 != 0;
-  auto res = yadisk::ops::subtract::Operations::subtract(tree1, tree2);
+  auto res = Operations::subtract(tree1, tree2);
   //Then
   REQUIRE(res == tree1);
   
@@ -29,7 +29,7 @@ TEST_CASE("subtract full tree1 and empty tree2", "[ops][subtract][tree]") {
     //When
   flat1 != 0;
   flat2 == 0;
-  auto res = yadisk::ops::subtract::Operations::subtract(tree1, tree2);
+  auto res = Operations::subtract(tree1, tree2);
   //Then
   REQUIRE(res == tree1);
   
@@ -45,7 +45,7 @@ TEST_CASE("subtract empty tree1 and empty tree2", "[ops][subtract][tree]") {
     //When
   flat1 == 0;
   flat2 == 0;
-  auto res = yadisk::ops::subtract::Operations::subtract(tree1, tree2);
+  auto res = Operations::subtract(tree1, tree2);
   //Then
   REQUIRE(res == tree1);
   
@@ -61,7 +61,7 @@ TEST_CASE("subtract full tree1 and full tree2", "[ops][subtract][tree]") {
     //When
   flat1 != 0;
   flat2 != 0;
-  auto res = yadisk::ops::subtract::Operations::subtract(tree1, tree2);
+  auto res = Operations::subtract(tree1, tree2);
   //Then
   REQUIRE(not res.empty());
   
