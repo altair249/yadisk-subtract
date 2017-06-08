@@ -71,4 +71,17 @@ if(BUILD_EXAMPLES)
 	endforeach(EXAMPLE_SOURCE ${EXAMPLE_SOURCES})
 endif()
 
+install(TARGETS yadisk-subtract
+		EXPORT yadisk-subtract-config
+		ARCHIVE DESTINATION lib
+		LIBRARY DESTINATION lib
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/ DESTINATION include)
+
+install(EXPORT yadisk-subtract-config
+		NAMESPACE yadisk-ops::
+		DESTINATION cmake
+)
+
 include(CPackConfig.cmake)
